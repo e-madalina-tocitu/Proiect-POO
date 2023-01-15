@@ -28,5 +28,16 @@ public:
 	static float nrMediuBilete(Bilet* participant, int nrBilete);
 	bool locuriVecine();
 	bool randuriConsecutive();
+	
 };
+
+class BiletVIP :public Bilet
+{
+public:
+
+	virtual string servicii(float cost)=0;
+
+};
+
+
 

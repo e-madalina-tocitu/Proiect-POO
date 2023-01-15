@@ -1,5 +1,5 @@
 #include "DetaliiEveniment.h"
-
+float DetaliiEveniment::taxaOnline = 3;
 DetaliiEveniment::DetaliiEveniment() :idEveniment()
 {
 	numeEveniment = "N/A";
@@ -239,6 +239,19 @@ void DetaliiEveniment::setpretEveniment(float p)
 	if (p > 0)
 	{
 		pretEveniment = p;
+	}
+}
+
+float DetaliiEveniment::gettaxaOnline()
+{
+	return taxaOnline;
+}
+
+ void DetaliiEveniment::settaxaOnline(float t)
+{
+	if (t > 0)
+	{
+		taxaOnline = t;
 	}
 }
 

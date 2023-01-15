@@ -151,7 +151,8 @@ string Participant::getID()
 }
 void Participant::setID(string y)
 {
-	this->ID = y;
+	
+	ID = getdataNasterii() / 1000 + log10(getdataNasterii() % 100)+strlen(getnumeIntreg());
 }
 
 bool Participant::majorLaMomentulCurent()

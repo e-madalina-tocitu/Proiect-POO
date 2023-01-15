@@ -48,10 +48,12 @@ public:
 	void setdurata(float d);
 	float getpretEveniment();
 	void setpretEveniment(float p);
+	static float gettaxaOnline();
+	static void settaxaOnline(float t);
 	float pretFinal();
 	int nrLocuriTotale();
 	bool operator==(DetaliiEveniment a);
 	bool operator<=(DetaliiEveniment b);
 };
-float DetaliiEveniment::taxaOnline = 3;
+
 

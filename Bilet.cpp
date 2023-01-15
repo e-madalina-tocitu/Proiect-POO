@@ -124,8 +124,16 @@ istream& operator>>(istream& in, Bilet& a)
 	in >> a.numarBilete;
 	cout << endl;
 	cout << "Locuri= ";
-	for (int i = 0; i < a.numarBilete; i++)
-		in >> a.locuri[i];
+	if (a.numarBilete > 1)
+	{
+		for (int i = 0; i < a.numarBilete; i++)
+		{
+			cout << "locul " << i;
+			in >> a.locuri[i];
+		}
+	}
+	else
+		in >> a.locuri[0];
 	cout << endl;
 	cout << "Randuri= ";
 	for (int i = 0; i < a.numarBilete; i++)
@@ -212,3 +220,20 @@ bool Bilet::randuriConsecutive()
 			return false;
 	return true;
 }
+
+
+
+string BiletVIP::servicii(float cost)
+{
+	string x;
+	if (cost == 50)
+		x = "gustari gatuite";
+	else
+		if (cost == 100)
+			x = "gustari si bautura gratuite";
+	return x;
+}
+
+
+
+
